@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+const { typewindTransforms } = require('typewind/transform');
 
 // Define animation keyframes
 const animations = {
@@ -49,12 +49,17 @@ const animations = {
   },
 };
 
-const config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+module.exports = {
+  content: {
+    files: ['./src/**/*.{js,jsx,ts,tsx}'],
+    transform: typewindTransforms,
+    // files: [
+    //   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    //   "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    //   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // ],
+    // transform: typewindTransforms,
+  },
   theme: {
     extend: {
       colors: {
@@ -139,6 +144,4 @@ const config = {
     },
   },
   plugins: [],
-} satisfies Config;
-
-export default config;
+};
