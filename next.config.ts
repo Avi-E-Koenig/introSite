@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
     resolveAlias: {
       canvas: './empty-module.ts'
     }
+  },
+  reactStrictMode: true,
+  experimental: {
+    swcPlugins: [['typewind/swc', {}]],
   }
 };
 

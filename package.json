@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postinstall": "typewind generate"
   },
   "dependencies": {
     "@storybook/addon-styling-webpack": "^1.0.1",
@@ -26,7 +27,8 @@
     "react-pdf": "^9.2.1",
     "react-simple-typewriter": "^5.0.1",
     "storybook-dark-mode": "^4.0.2",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "typewind": "^0.3.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",
