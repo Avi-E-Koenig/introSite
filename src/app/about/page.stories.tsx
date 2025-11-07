@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 import AboutPage from './page';
 
 const meta = {
-  title: 'App/Pages/Home',
+  title: 'App/Pages/About',
   component: AboutPage,
   parameters: {
     layout: 'fullscreen',
