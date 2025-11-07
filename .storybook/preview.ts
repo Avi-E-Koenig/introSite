@@ -1,7 +1,7 @@
 // .storybook/preview.ts
 import type { Preview } from '@storybook/nextjs'
+import { withThemeByClassName } from '@storybook/addon-themes'
 import { fn } from 'storybook/test'
-import { themes } from 'storybook/theming'   // ⬅️ change this line
 import '../src/app/globals.css'
 
 const preview: Preview = {
@@ -13,14 +13,24 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    themes: {
-      default: 'light',
-      list: [
-        { name: 'light', class: 'light', color: '#ffffff', theme: themes.light },
-        { name: 'dark',  class: 'dark',  color: '#000000', theme: themes.dark  },
-      ],
+  },
+  globalTypes: {
+    theme: {
+      name: 'Theme',
+      description: 'Global theme for components',
+      defaultValue: 'light',
     },
   },
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+      parentSelector: 'body',
+    }),
+  ],
 }
 
 export default preview
