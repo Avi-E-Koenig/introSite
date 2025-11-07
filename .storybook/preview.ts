@@ -1,10 +1,11 @@
-import type { Preview } from "@storybook/react";
-import { fn } from '@storybook/test';
-import '../src/app/globals.css';
+// .storybook/preview.ts
+import type { Preview } from '@storybook/nextjs'
+import { fn } from 'storybook/test'
+import { themes } from 'storybook/theming'   // ⬅️ change this line
+import '../src/app/globals.css'
 
 const preview: Preview = {
   parameters: {
-    // actions: { argTypesRegex: "^on[A-Z].*" },
     args: { onClick: fn() },
     controls: {
       matchers: {
@@ -12,13 +13,14 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    darkMode: {
-      current: 'light',
-      darkClass: 'dark',
-      lightClass: 'light',
-      stylePreview: true,
-    }
+    themes: {
+      default: 'light',
+      list: [
+        { name: 'light', class: 'light', color: '#ffffff', theme: themes.light },
+        { name: 'dark',  class: 'dark',  color: '#000000', theme: themes.dark  },
+      ],
+    },
   },
-};
+}
 
-export default preview;
+export default preview

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 import IconCard from './card';
 import { DiJavascript1, DiReact, DiNodejs, DiMongodb } from 'react-icons/di';
 
