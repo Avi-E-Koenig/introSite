@@ -2,8 +2,7 @@
 
 import Image from 'next/image';
 
-import { AiFillGithub } from 'react-icons/ai';
-import { FaLinkedinIn } from 'react-icons/fa';
+import SocialLinks from '@/components/ui/links/social-links';
 import Tilt from 'react-parallax-tilt';
 import TypeWritterWrapper from '@/components/ui/typewriter';
 
@@ -28,7 +27,7 @@ export default function Home() {
               </h2>
               <h2 className="text-3xl md:text-4xl font-bold">
                 I&apos;M
-                <strong className="text-[#be6adf] ml-2">AVI E. Koenig</strong>
+                <strong className="text-[#be6adf] ml-2">Avi E. Koenig</strong>
               </h2>
               <h2 className="mt-8 text-[#be6adf] text-[35px] md:text-[30px] font-bold h-10 w-10">
                 <TypeWritterWrapper
@@ -60,34 +59,30 @@ export default function Home() {
               <h1 className="text-4xl font-bold mb-4 text-center">
                 LET ME <span className="text-purple-500"> INTRODUCE </span> MYSELF
               </h1>
-
+              {/* Description of myself */}
               <section className="home-about-body text-lg leading-relaxed">
                 <p>
-                  I fell in love with programming, and I have at least learned something, I think…
-                  🤷‍♂️
+                  I fell in love with programming years ago—and that passion keeps growing.
+                  Every project challenges me to build smarter, stronger, and cleaner systems.
                 </p>
                 <p>
-                  I am fluent in classics like
-                  <i>
-                    <b className="text-purple-500"> Javascript,C# & PHP. </b>
-                  </i>
+                  I’m fluent in <b className="text-purple-500">JavaScript, C#, and PHP</b>,
+                  with over a decade of experience across web technologies, frameworks, and stacks.
                 </p>
                 <p>
-                  My field of interest is building new&nbsp;
-                  <i>
-                    <b className="text-purple-500">Web Technologies and Products</b>
-                  </i>
-                  &nbsp;&nbsp;and areas related to&nbsp;&nbsp;
-                  <i>
-                    <b className="text-purple-500">Fullstack Apps,CRM</b>
-                  </i>
-                  &nbsp;& many more.
+                  My work revolves around creating <b className="text-purple-500">reliable, production-grade software</b>—
+                  the kind that scales, survives refactors, and stays maintainable under pressure.
                 </p>
-                Whenever possible, I also apply my passion for developing products with{' '}
-                <b className="text-purple-500">Node.js</b> and modern frameworks like{' '}
-                <i>
-                  <b className="text-purple-500">React.js and Next.js.</b>
-                </i>
+                <p>
+                  I aim for <b className="text-purple-500">strong, tested code</b>—whether through
+                  <b className="text-purple-500"> Jest</b>, <b className="text-purple-500">end-to-end testing</b>,
+                  or simply meticulous attention to detail in every commit.
+                </p>
+                <p>
+                  I enjoy working with <b className="text-purple-500">Node.js</b>,
+                  <b className="text-purple-500">React</b>, and <b className="text-purple-500">Next.js</b>,
+                  building full-stack apps, CRMs, and platforms that balance performance, usability, and maintainability.
+                </p>
               </section>
             </div>
 
@@ -109,30 +104,16 @@ export default function Home() {
           <div className="mt-16 text-center">
             <h1 className="text-3xl font-bold mb-4">FIND ME ON</h1>
             <p className="text-lg mb-6">
-              Feel free to <span className="text-purple-500">connect</span> with me
+              Feel free to{' '}
+              <a
+                href="mailto:avi@koenig.co.il"
+                className="text-purple-500 underline decoration-dotted underline-offset-4 hover:decoration-solid"
+              >
+                connect
+              </a>{' '}
+              with me
             </p>
-            <ul className="flex justify-center space-x-6">
-              <li>
-                <a
-                  href="https://github.com/Darkmift"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-500 p-3  hover:bg-purple-500 hover:text-white transition"
-                >
-                  <AiFillGithub size={45} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/avi-koenig/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-500 p-3 hover:bg-purple-500 hover:text-white transition"
-                >
-                  <FaLinkedinIn size={45} />
-                </a>
-              </li>
-            </ul>
+            <SocialLinks iconSize={60} />
           </div>
         </div>
       </section>
