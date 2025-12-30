@@ -1,12 +1,11 @@
 import React from 'react';
-import { AiFillGithub } from 'react-icons/ai';
-import { FaLinkedinIn } from 'react-icons/fa';
+import SocialLinks from '@/components/ui/links/social-links';
 
 function Footer() {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <footer className="footer bg-gray-900 text-white py-8">
+    <footer className="footer bg-gray-900 text-white py-2">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Designed and Developed Section */}
@@ -27,24 +26,7 @@ function Footer() {
           </div>
 
           {/* Social Icons Section */}
-          <div className="flex justify-center space-x-6">
-            <a
-              href="https://github.com/Darkmift"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-purple-500 transition"
-            >
-              <AiFillGithub size={25} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/avi-koenig/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-purple-500 transition"
-            >
-              <FaLinkedinIn size={25} />
-            </a>
-          </div>
+          <SocialLinks className="text-white [&_a]:border-white [&_a]:text-white [&_a:hover]:border-purple-400 [&_a:hover]:text-purple-300" />
         </div>
       </div>
     </footer>

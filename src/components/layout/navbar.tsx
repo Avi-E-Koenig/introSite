@@ -92,7 +92,7 @@ const Navbar = () => {
             </Li> */}
             <li className="relative ml-5">
               <a
-                href="https://github.com/Darkmift"
+                href="https://github.com/Avi-E-Koenig"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#623686] border border-transparent rounded-md text-white cursor-pointer text-base font-normal leading-6 px-3 py-1.5 text-center no-underline transition duration-150 ease-in-out transform hover:scale-110 hover:text-yellow-500 flex items-center"
